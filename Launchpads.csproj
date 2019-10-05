@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6A700CD7-D131-4E58-B826-4008E6CA192C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Launchpads</RootNamespace>
+    <AssemblyName>Launchpads</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>D:\Games\Steam\SteamApps\common\Kerbal Space Program\KSP_x64_Data\Managed\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp-firstpass">
+      <HintPath>D:\Games\Steam\SteamApps\common\Kerbal Space Program\KSP_x64_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
+    </Reference>
+    <Reference Include="Kopernicus">
+      <HintPath>D:\Games\Steam\SteamApps\common\Kerbal Space Program\GameData\Kopernicus\Plugins\Kopernicus.dll</HintPath>
+    </Reference>
+    <Reference Include="KSPAssets">
+      <HintPath>D:\Games\Steam\SteamApps\common\Kerbal Space Program\KSP_x64_Data\Managed\KSPAssets.dll</HintPath>
+    </Reference>
+    <Reference Include="KSPTrackIR">
+      <HintPath>D:\Games\Steam\SteamApps\common\Kerbal Space Program\KSP_x64_Data\Managed\KSPTrackIR.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine">
+      <HintPath>D:\Games\Steam\SteamApps\common\Kerbal Space Program\KSP_x64_Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>D:\Games\Steam\SteamApps\common\Kerbal Space Program\KSP_x64_Data\Managed\UnityEngine.UI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Source\AirstreamShield.cs" />
+    <Compile Include="Source\assembly\Checkers.cs" />
+    <Compile Include="Source\assembly\VersionReport.cs" />
+    <Compile Include="Source\BuildControl.cs" />
+    <Compile Include="Source\CommandSeat\ControlReference.cs" />
+    <Compile Include="Source\CommandSeat\FixSeatName.cs" />
+    <Compile Include="Source\CommandSeat\NoControlSwitch.cs" />
+    <Compile Include="Source\ControlInterface.cs" />
+    <Compile Include="Source\Converter\Converter.cs" />
+    <Compile Include="Source\Converter\CoreHeat.cs" />
+    <Compile Include="Source\Converter\Extractor.cs" />
+    <Compile Include="Source\Converter\IResourceProvider.cs" />
+    <Compile Include="Source\Converter\KethaneResourceProvider.cs" />
+    <Compile Include="Source\Converter\StockResourceProvider.cs" />
+    <Compile Include="Source\DisposablePad\DisposablePad.cs" />
+    <Compile Include="Source\GUI\BuildWindow.cs" />
+    <Compile Include="Source\GUI\CraftBrowser.cs" />
+    <Compile Include="Source\GUI\DropDownList.cs" />
+    <Compile Include="Source\GUI\EditorToolbar.cs" />
+    <Compile Include="Source\GUI\ProgressBar.cs" />
+    <Compile Include="Source\GUI\RenameWindow.cs" />
+    <Compile Include="Source\GUI\ResourceWindow.cs" />
+    <Compile Include="Source\GUI\ScrollView.cs" />
+    <Compile Include="Source\GUI\ShipInfo.cs" />
+    <Compile Include="Source\GUI\Styles.cs" />
+    <Compile Include="Source\GUI\TextField.cs" />
+    <Compile Include="Source\Hull\Box.cs" />
+    <Compile Include="Source\Hull\Connectivity.cs" />
+    <Compile Include="Source\Hull\CraftHull.cs" />
+    <Compile Include="Source\Hull\Edge.cs" />
+    <Compile Include="Source\Hull\FaceSet.cs" />
+    <Compile Include="Source\Hull\Quickhull.cs" />
+    <Compile Include="Source\Hull\RawMesh.cs" />
+    <Compile Include="Source\Hull\Triangle.cs" />
+    <Compile Include="Source\LaunchClamp\LaunchClamp.cs" />
+    <Compile Include="Source\lib\KACWrapper.cs" />
+    <Compile Include="Source\lib\KASWrapper.cs" />
+    <Compile Include="Source\lib\KerbalStatsWrapper.cs" />
+    <Compile Include="Source\lib\KISWrapper.cs" />
+    <Compile Include="Source\lib\Utils.cs" />
+    <Compile Include="Source\Pad\Launchpad.cs" />
+    <Compile Include="Source\Recipes\BuildCost.cs" />
+    <Compile Include="Source\Recipes\BuildResource.cs" />
+    <Compile Include="Source\Recipes\BuildResourceSet.cs" />
+    <Compile Include="Source\Recipes\ConverterRecipe.cs" />
+    <Compile Include="Source\Recipes\CostReport.cs" />
+    <Compile Include="Source\Recipes\Ingredient.cs" />
+    <Compile Include="Source\Recipes\PartRecipe.cs" />
+    <Compile Include="Source\Recipes\Recipe.cs" />
+    <Compile Include="Source\Recipes\RecipeDatabase.cs" />
+    <Compile Include="Source\Recipes\RecipeLoader.cs" />
+    <Compile Include="Source\Recipes\RecipeResourceContainer.cs" />
+    <Compile Include="Source\Recycler\Recycler.cs" />
+    <Compile Include="Source\Recycler\StateMachine.cs" />
+    <Compile Include="Source\ResourceManager\IResourceContainer.cs" />
+    <Compile Include="Source\ResourceManager\KISResourceContainer.cs" />
+    <Compile Include="Source\ResourceManager\PartResourceContainer.cs" />
+    <Compile Include="Source\ResourceManager\ResourceInfo.cs" />
+    <Compile Include="Source\ResourceManager\ResourceManager.cs" />
+    <Compile Include="Source\ResourceManager\ResourceSet.cs" />
+    <Compile Include="Source\ResourceManager\ResourceSetContainer.cs" />
+    <Compile Include="Source\Settings.cs" />
+    <Compile Include="Source\Survey\Billboard.cs" />
+    <Compile Include="Source\Survey\Points.cs" />
+    <Compile Include="Source\Survey\SiteBody.cs" />
+    <Compile Include="Source\Survey\SiteList.cs" />
+    <Compile Include="Source\Survey\SurveySite.cs" />
+    <Compile Include="Source\Survey\SurveySkill.cs" />
+    <Compile Include="Source\Survey\SurveyStake.cs" />
+    <Compile Include="Source\Survey\SurveyStation.cs" />
+    <Compile Include="Source\Survey\SurveyTracker.cs" />
+    <Compile Include="Source\Survey\VirtualPad.cs" />
+    <Compile Include="Source\Target\Target.cs" />
+    <Compile Include="Source\toolbar\Toolbar.cs" />
+    <Compile Include="Source\toolbar\ToolbarWrapper.cs" />
+    <Compile Include="Source\Workshop\ConstructionSkill.cs" />
+    <Compile Include="Source\Workshop\ProtoWorkSink.cs" />
+    <Compile Include="Source\Workshop\VesselWorkNet.cs" />
+    <Compile Include="Source\Workshop\Workshop.cs" />
+    <Compile Include="Source\Workshop\WorkSink.cs" />
+    <Compile Include="Source\Workshop\WorkSource.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Source\assembly\AssemblyInfo.in" />
+    <None Include="Source\Hull\data\AeroEquus-points.bin.gz" />
+    <None Include="Source\Hull\data\Mallard-points.bin.gz" />
+    <None Include="Source\Hull\data\micropadtest-points.bin.gz" />
+    <None Include="Source\Hull\data\RavenspearMk3-points.bin.gz" />
+    <None Include="Source\Hull\data\ScienceJr-points.bin.gz" />
+    <None Include="Source\Hull\data\surveytest-points.bin.gz" />
+    <None Include="Source\Hull\data\ViewmaticSurveySatellite-points.bin.gz" />
+    <None Include="Source\Hull\Makefile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Source\Hull\.gitignore" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
